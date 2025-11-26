@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Attendance - Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Student Attendance System</h1>
+      <p class="description">Choose a role to continue</p>
+    </header>
+
+    <div class="card">
+      <div class="row">
+        <a class="submit-btn" href="student.html">Student — Register</a>
+        <a class="submit-btn" href="teacher.html">Teacher — Dashboard</a>
+      </div>
+
+      <p class="small" style="margin-top:12px">
+        Frontend connects to: <strong id="apiLabel"></strong>
+      </p>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script>
+    document.getElementById('apiLabel').textContent = window.API_URL;
+  </script>
+</body>
+</html>

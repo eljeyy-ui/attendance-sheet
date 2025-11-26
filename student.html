@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Student Registration</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Student Registration</h1>
+      <p class="description">Register a student (saved to backend)</p>
+    </header>
+
+    <div class="card">
+      <form id="studentForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="studentGivenName">Given Name</label>
+            <input id="studentGivenName" type="text" />
+            <div id="givenNameError" class="input-error"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="studentLastName">Last Name</label>
+            <input id="studentLastName" type="text" />
+            <div id="lastNameError" class="input-error"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="studentNumber">Student Number</label>
+            <input id="studentNumber" type="text" />
+            <div id="studentNumberError" class="input-error"></div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="yearSection">Course/Year/Section</label>
+            <input id="yearSection" type="text" placeholder="e.g. 3rd Year - Section A" />
+            <div id="yearSectionError" class="input-error"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="studentEmail">Email</label>
+            <input id="studentEmail" type="email" placeholder="student@example.com" />
+            <div id="emailError" class="input-error"></div>
+          </div>
+        </div>
+
+        <div style="margin-top:12px">
+          <button class="submit-btn" type="submit">Register Student</button>
+          <a href="index.html" class="dashboard-back-btn" style="background:#9ca3af;margin-left:8px">Back</a>
+        </div>
+      </form>
+    </div>
+
+    <div class="card small">
+      <strong>Note:</strong> This frontend sends a POST to <code>/students</code> on the configured API.
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="student.js"></script>
+</body>
+</html>

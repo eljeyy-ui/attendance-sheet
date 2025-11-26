@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Teacher Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Teacher Dashboard</h1>
+      <p class="description">Login as teacher to mark attendance</p>
+    </header>
+
+    <div class="card" id="loginContainer">
+      <label for="teacherEmail">Email</label>
+      <input id="teacherEmail" type="email" placeholder="admin@gmail.com" />
+      <label for="teacherPassword">Password</label>
+      <input id="teacherPassword" type="password" placeholder="admin123" />
+      <div style="margin-top:10px">
+        <button id="loginBtn" class="submit-btn">Login</button>
+        <a href="index.html" class="dashboard-back-btn" style="background:#9ca3af;margin-left:8px">Back</a>
+      </div>
+    </div>
+
+    <div class="card" id="teacherDashboard" style="display:none">
+      <div class="controls">
+        <div class="form-group">
+          <label>Subject</label>
+          <input id="subjectInput" type="text" placeholder="e.g. Math 101" />
+        </div>
+        <div class="form-group">
+          <label>Date</label>
+          <input id="attendanceDate" type="date" />
+        </div>
+        <div style="margin-left:auto">
+          <button id="markAllBtn" class="mark-all-btn">Mark All Present</button>
+          <button id="saveAttendanceBtn" class="save-btn">Save Attendance</button>
+        </div>
+      </div>
+
+      <h3>Students</h3>
+      <table id="studentsTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Student Number</th>
+            <th>Year/Section</th>
+            <th>Attendance</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="teacher.js"></script>
+</body>
+</html>
